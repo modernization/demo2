@@ -1,0 +1,58 @@
+<h1 align="center">Complaint List</h1> </br>
+<b><div align="center"><%= link_to 'Add New', new_complaint_path %></diV></b></br>
+
+<table border="1" align="center" width="100%">
+
+  <thead>
+    <tr BGCOLOR="#99CCFF"> 
+      <th colspan="1"></th> 
+	<th align="center">Complaint Date</th>
+      <th align="center">Complaint #</th>
+      <th align="center">Complaint status</th>
+      <th align="center">Anonymous</th>
+      <th align="center">First Name</th>
+      <th align="center">Middle Name</th>
+      <th align="center">Last Name</th>
+      <th align="center">Street1</th>
+      <th align="center">Street2</th>
+      <th align="center">City</th>
+      <th align="center">State</th>
+      <th align="center">Zip</th>
+      <th align="center">Country</th>      
+      <th align="center">Email</th>       
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @complaints.each do |complaint| %>
+      <tr>
+         <td><b><%= link_to 'Edit', edit_complaint_path(complaint) %></b></td>
+	   <td><%= complaint.cmtdate %></td>
+        <td align="center"><%= complaint.cmtnmb %></td>
+        <td><%= complaint.cmtstatus %></td>
+        <td><%= complaint.cmtanonymous %></td>
+        <td><%= complaint.cmtfirstnm %></td>
+        <td><%= complaint.cmtmiddlenm %></td>
+        <td><%= complaint.cmtlastnm %></td>
+        <td><%= complaint.cmtst1 %></td>
+        <td><%= complaint.cmtst2 %></td>
+        <td><%= complaint.cmtcity %></td>
+        <td><%= complaint.cmtst %></td>
+        <td><%= complaint.cmtzip %></td>
+        <td><%= complaint.cmtcountry %></td>       
+        <td><%= complaint.cmtemail %></td>                            
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+

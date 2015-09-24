@@ -1,0 +1,255 @@
+
+
+
+<%= form_for(@complaint) do |f| %>
+  <% if @complaint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@complaint.errors.count, "error") %> prohibited this complaint from being saved:</h2>
+
+      <ul>
+      <% @complaint.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br>
+<h3>Complaint Details</h3>  
+  <div class="field">
+   	<b>Complaint Date: </b><%= f.date_select :cmtdate %>
+  </div>
+  <div class="field">
+  	<b>Complaint Number: </b><%= f.number_field:cmtnmb %>
+  </div>
+  <div class="field">
+	<b>Complaint Status: </b><%= f.text_field :cmtstatus %>  
+  </div>
+ 
+<div class="field">
+    <%= f.label :Anonymous %><br/>
+    <%= f.check_box :cmtanonymous %>I choose to remain Anonymous. I do not wish to provide my name in connection with this decision to remain anonymous will prevent the SBA-OIG from contacting me for additional information and may prevent a comprehensive assessment of my complaint.
+  </div>
+<table border ="0">
+ <tr>      
+      <th align="right">First Name: </th> <td><label title="First Name"><%= f.text_field :cmtfirstnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Middle Name: </th> <td>
+        <label title="Middle Name"><%= f.text_field :cmtmiddlenm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Last Name: </th> <td>
+        <label title="Last Name"><%= f.text_field :cmtlastnm %></label></td>
+</tr>
+<tr>
+<th align="right">Street 1: </th> <td><label title="Street 1"><%= f.text_field :cmtst1 %></label></td>
+</tr>
+<tr>      
+      <th align="right">Street 2: </th> <td>
+
+        <label title="Street 2"><%= f.text_field :cmtst2 %></label></td>
+</tr>
+<tr>
+ <th align="right">City: </th><td><label title="City"><%= f.text_field :cmtcity %></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">State: </th><td>
+<label title="State"><%= f.text_field :cmtst %></td></label>
+</td>
+</tr>
+<tr>
+ <th align="right">Zip: </th><td>
+<label title="Zip"><%= f.number_field :cmtzip %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Country: </th><td>
+
+<label title="Country"><%= f.text_field :cmtcountry %></td></label>
+</tr>
+<tr>
+ <th align="right">Email: </th><td>
+<label title="Email"><%= f.text_field :cmtemail%></td></label>
+</td>
+</tr>
+</table>  
+<br>
+ <hr></hr>
+<h3>Wrongdoer Details</h3>
+<table border ="0">
+ <tr>      
+      <th align="right">First Name: </th> <td><label title="First Name"><%= f.text_field :wgrfirstnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Middle Name: </th> <td>
+        <label title="Middle Name"><%= f.text_field :wgrmiddlenm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Last Name: </th> <td>
+        <label title="Last Name"><%= f.text_field :wgrlastnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Title: </th> <td>
+        <label title="Title"><%= f.text_field :wgrtitle %></label></td>
+</tr>
+
+<tr>
+<th align="right">Street 1: </th> <td><label title="Street 1"><%= f.text_field :wgrst1 %></label></td>
+</tr>
+<tr>      
+      <th align="right">Street 2: </th> <td>
+
+        <label title="Street 2"><%= f.text_field :wgrst2 %></label></td>
+</tr>
+
+<tr>
+ <th align="right">City: </th><td><label title="City"><%= f.text_field :wgrcity %></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">State: </th><td>
+<label title="State"><%= f.text_field :wgrst %></td></label>
+</td>
+</tr>
+<tr>
+ <th align="right">Zip: </th><td>
+<label title="Zip"><%= f.number_field :wgrzip %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Country: </th><td>
+
+<label title="Country"><%= f.text_field :wgrcountry %></td></label>
+</tr>
+
+
+</table>  
+<br>
+
+ <hr></hr>
+<h3>Wrongdoer Business Details</h3>
+<table border ="0">
+ <tr>      
+      <th align="right">First Name: </th> <td><label title="First Name"><%= f.text_field :wgrcomfirstnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Middle Name: </th> <td>
+        <label title="Middle Name"><%= f.text_field :wgrcommiddlenm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Last Name: </th> <td>
+        <label title="Last Name"><%= f.text_field :wgrcomlastnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Company Duns: </th> <td>
+        <label title="Company DUNS"><%= f.number_field :wgrcomduns%></label></td>
+</tr>
+
+<tr>
+<th align="right">Street 1: </th> <td><label title="Street 1"><%= f.text_field :wgrcomst1 %></label></td>
+</tr>
+<tr>      
+      <th align="right">Street 2: </th> <td>
+
+        <label title="Street 2"><%= f.text_field :wgrcomst2 %></label></td>
+</tr>
+
+<tr>
+ <th align="right">City: </th><td><label title="City"><%= f.text_field :wgrcomcity %></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">State: </th><td>
+<label title="State"><%= f.text_field :wgrcomst %></td></label>
+</td>
+</tr>
+<tr>
+ <th align="right">Zip: </th><td>
+<label title="Zip"><%= f.number_field :wgrcomzip %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Country: </th><td>
+
+<label title="Country"><%= f.text_field :wgrcomcountry %></td></label>
+</tr>
+
+
+</table>  
+<br>
+ <hr></hr>
+ <h3>SBA Program	</h3>
+
+<table border ="0">
+
+<tr>
+ <th align="right">SBA Loan/Program Type: </th><td>
+<label title="SBA Loan/Program Type"><%= f.text_field :prog %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Name: </th><td>
+
+<label title="Name"><%= f.text_field :progloannm %></td></label>
+</tr>
+
+<tr>
+ <th align="right">Loan Number: </th><td>
+
+<label title="Loan Number"><%= f.number_field :progloannmb %></td></label>
+</tr>
+
+</table>
+<br>
+ <hr></hr>
+ <h3>Complaint Narrative</h3> 
+  <div class="field" >    
+    <%= f.text_area :cmtnarrative %>
+  </div>
+<br>
+ <hr></hr>
+ <div><%= f.check_box :cmtrptother %>Have you reported this matter to any other Organizations/Agencies?</div>
+<table border ="1">
+<table border ="0">
+
+<tr>
+ <th align="right">Agency/Org Name: </th><td>
+<label title="Agency/Org Name"><%= f.text_field :cmtrptorg %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">When: </th><td>
+
+<label title="When"><%= f.date_select :cmtrptdt %></td></label>
+</tr>
+
+<tr>
+ <th align="right">Status: </th><td>
+
+<label title="Status"><%= f.text_field :cmtrptstatus %></td></label>
+</tr>
+
+</table>  
+<br>
+ <hr></hr>
+
+  <div class="field">    
+    <%= f.check_box :cmtcertify %>I certify that all the statements made in this complaint area are true, complete, and 
+understand that a false statement or concealment of a material fact is a criminal offense (18 U.S.C. 1001; Inspector General Act of 1978, As Amended, 7)</div>
+  
+<div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+

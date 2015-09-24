@@ -1,0 +1,251 @@
+<h1 align="Center">Show Complaint Details of : <%= @complaint.cmtnmb %>
+</h1>
+
+<p id="notice"><%= notice %></p>
+
+<div align="right">
+
+<b><%= link_to 'Edit', edit_complaint_path(@complaint) %> |
+<%= link_to 'Back', complaints_path %></b>
+</div>
+
+<br>
+<h3>Complaint Details</h3>  
+  <div class="field">
+   	<b>Complaint Date: </b><%= @complaint.cmtdate %>
+  </div>
+  <div class="field">
+  	<b>Complaint Number: </b><%= @complaint.cmtnmb %>
+  </div>
+  <div class="field">
+	<b>Complaint Status: </b><%= @complaint.cmtstatus %>  
+  </div>
+ 
+<div class="field">
+    
+    <%= @complaint.cmtanonymous %> I choose to remain Anonymous. I do not wish to provide my name in connection with this decision to remain anonymous will prevent the SBA-OIG from contacting me for additional information and may prevent a comprehensive assessment of my complaint.
+  </div>
+<table border ="0">
+ <tr>      
+      <th align="right">First Name: </th> <td><label title="First Name"><%= @complaint.cmtfirstnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Middle Name: </th> <td>
+        <label title="Middle Name"><%= @complaint.cmtmiddlenm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Last Name: </th> <td>
+        <label title="Last Name"><%= @complaint.cmtlastnm %></label></td>
+</tr>
+<tr>
+<th align="right">Street 1: </th> <td><label title="Street 1"><%= @complaint.cmtst1 %></label></td>
+</tr>
+<tr>      
+      <th align="right">Street 2: </th> <td>
+
+        <label title="Street 2"><%= @complaint.cmtst2 %></label></td>
+</tr>
+<tr>
+ <th align="right">City: </th><td><label title="City"><%= @complaint.cmtcity %></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">State: </th><td>
+<label title="State"><%= @complaint.cmtst %></td></label>
+</td>
+</tr>
+<tr>
+ <th align="right">Zip: </th><td>
+<label title="Zip"><%= @complaint.cmtzip %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Country: </th><td>
+
+<label title="Country"><%= @complaint.cmtcountry %></td></label>
+</tr>
+<tr>
+ <th align="right">Email: </th><td>
+<label title="Email"><%= @complaint.cmtemail%></td></label>
+</td>
+</tr>
+</table>  
+<br>
+ <hr></hr>
+<h3>Wrongdoer Details</h3>
+<table border ="0">
+ <tr>      
+      <th align="right">First Name: </th> <td><label title="First Name"><%= @complaint.wgrfirstnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Middle Name: </th> <td>
+        <label title="Middle Name"><%= @complaint.wgrmiddlenm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Last Name: </th> <td>
+        <label title="Last Name"><%= @complaint.wgrlastnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Title: </th> <td>
+        <label title="Title"><%= @complaint.wgrtitle %></label></td>
+</tr>
+
+<tr>
+<th align="right">Street 1: </th> <td><label title="Street 1"><%= @complaint.wgrst1 %></label></td>
+</tr>
+<tr>      
+      <th align="right">Street 2: </th> <td>
+
+        <label title="Street 2"><%= @complaint.wgrst2 %></label></td>
+</tr>
+
+<tr>
+ <th align="right">City: </th><td><label title="City"><%= @complaint.wgrcity %></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">State: </th><td>
+<label title="State"><%= @complaint.wgrst %></td></label>
+</td>
+</tr>
+<tr>
+ <th align="right">Zip: </th><td>
+<label title="Zip"><%= @complaint.wgrzip %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Country: </th><td>
+
+<label title="Country"><%= @complaint.wgrcountry %></td></label>
+</tr>
+
+
+</table>  
+<br>
+
+ <hr></hr>
+<h3>Wrongdoer Business Details</h3>
+<table border ="0">
+ <tr>      
+      <th align="right">First Name: </th> <td><label title="First Name"><%= @complaint.wgrcomfirstnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Middle Name: </th> <td>
+        <label title="Middle Name"><%= @complaint.wgrcommiddlenm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Last Name: </th> <td>
+        <label title="Last Name"><%= @complaint.wgrcomlastnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Company Duns: </th> <td>
+        <label title="Company DUNS"><%= @complaint.wgrcomduns%></label></td>
+</tr>
+
+<tr>
+<th align="right">Street 1: </th> <td><label title="Street 1"><%= @complaint.wgrcomst1 %></label></td>
+</tr>
+<tr>      
+      <th align="right">Street 2: </th> <td>
+
+        <label title="Street 2"><%= @complaint.wgrcomst2 %></label></td>
+</tr>
+
+<tr>
+ <th align="right">City: </th><td><label title="City"><%= @complaint.wgrcomcity %></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">State: </th><td>
+<label title="State"><%= @complaint.wgrcomst %></td></label>
+</td>
+</tr>
+<tr>
+ <th align="right">Zip: </th><td>
+<label title="Zip"><%= @complaint.wgrcomzip %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Country: </th><td>
+
+<label title="Country"><%= @complaint.wgrcomcountry %></td></label>
+</tr>
+
+
+</table>  
+<br>
+ <hr></hr>
+ <h3>SBA Program	</h3>
+
+<table border ="0">
+
+<tr>
+ <th align="right">SBA Loan/Program Type: </th><td>
+<label title="SBA Loan/Program Type"><%= @complaint.prog %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Name: </th><td>
+
+<label title="Name"><%= @complaint.progloannm %></td></label>
+</tr>
+
+<tr>
+ <th align="right">Loan Number: </th><td>
+
+<label title="Loan Number"><%= @complaint.progloannmb %></td></label>
+</tr>
+
+</table>
+<br>
+ <hr></hr>
+ <h3>Complaint Narrative</h3> 
+  <div class="field" >    
+    <%= @complaint.cmtnarrative %>
+  </div>
+<br>
+ <hr></hr>
+ <div><%= @complaint.cmtrptother %> Have you reported this matter to any other Organizations/Agencies?</div>
+<table border ="1">
+<table border ="0">
+
+<tr>
+ <th align="right">Agency/Org Name: </th><td>
+<label title="Agency/Org Name"><%= @complaint.cmtrptorg %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">When: </th><td>
+
+<label title="When"><%= @complaint.cmtrptdt %></td></label>
+</tr>
+
+<tr>
+ <th align="right">Status: </th><td>
+
+<label title="Status"><%= @complaint.cmtrptstatus %></td></label>
+</tr>
+
+</table>  
+<br>
+ <hr></hr>
+
+  <div class="field">    
+    <%= @complaint.cmtcertify %> I certify that all the statements made in this complaint area are true, complete, and 
+understand that a false statement or concealment of a material fact is a criminal offense (18 U.S.C. 1001; Inspector General Act of 1978, As Amended, 7)</div>
+  
+<b><%= link_to 'Edit', edit_complaint_path(@complaint) %> |<%= link_to 'Back', complaints_path %></b>
+
+
+
+
+
+
